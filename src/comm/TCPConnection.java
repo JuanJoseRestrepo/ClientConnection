@@ -79,7 +79,7 @@ public class TCPConnection extends Thread {
 				}else if(msj.getBytes().length == 8192) {
 					long b1 = System.nanoTime();
 					long rtt = b1 -a1;
-					long resolve = (((8192+8192)/rtt)/1000);
+					double resolve = (((8192+8192)/rtt)/1000.0);
 					
 					listener.onMessageTime("" + resolve);
 					
